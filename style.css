@@ -1,0 +1,594 @@
+
+body {
+
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    background-color: #fdcae1;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+header{
+
+    background-color: black;
+    color: lightpink;
+    padding: 3%;
+    border-radius: 1rem;
+
+}
+
+header:hover{
+
+    box-shadow: 0 0.2rem 0.4rem red;
+
+}
+
+header h1{
+
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+h2{
+
+    font-size: 3rem;
+    text-align: center;
+
+}
+
+h1:hover{
+
+    transform: scale(1.1);
+    color: red;
+
+}
+
+h3{
+
+    font-size: 1.5rem;
+
+}
+
+
+
+.gallery{
+
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(375px, 1fr));
+    width: 100%;
+    margin:auto;
+    grid-gap: 10px;
+    padding: 20px 0;
+    overflow: hidden;
+
+}
+
+.gallery > a{
+
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.1rem 0.1rem black;
+    border-radius: 1rem;
+
+
+}
+
+
+.gallery img{
+
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+
+
+}
+
+.gallery a:hover{
+
+    box-shadow: 0 0.2rem 0.4rem black;
+    transition: transform .2s;
+
+}
+
+.gallery a:hover img{
+
+    filter: blur(0.5px);
+    transform: rotate(3deg) scale(1.1)
+
+}
+
+
+.light-box{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
+
+}
+
+.light-box img{
+
+    width: 35vw;
+    max-height: 70vh;
+    border-radius: 10%;
+
+}
+
+.light-box:target{
+
+    transform: scale(1);
+
+}
+
+
+.gallery2{
+
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(375px, 1fr));
+    width: 100%;
+    margin:auto;
+    grid-gap: 10px;
+    padding: 20px 0;
+    overflow: hidden;
+
+}
+
+.gallery2 > a{
+
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.1rem 0.1rem black;
+    border-radius: 1rem;
+
+}
+
+
+.gallery2 img{
+
+    width: 100%;
+    vertical-align: top;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.5s;
+
+
+}
+
+.gallery2 a:hover{
+
+    box-shadow: 0 0.2rem 0.4rem black;
+    transition: transform .2s;
+
+}
+
+.gallery2 a:hover img{
+
+    filter: blur(0.5px);
+    transform: rotate(3deg) scale(1.1)
+
+}
+
+
+.light-box2{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
+
+}
+
+.light-box2 img{
+
+    width: 25vw;
+    max-height: 70vh;
+    border-radius: 10%;
+
+}
+
+.light-box2:target{
+
+    transform: scale(1);
+
+}
+
+
+.gallery3{
+
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(375px, 1fr));
+    /* Antes nimmax estaba en 350 y arriba el margen de body era 13 */
+    width: 100%;
+    margin:auto;
+    grid-gap: 10px;
+    padding: 20px 0;
+    overflow: hidden;
+
+}
+
+.gallery3 > a{
+
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.1rem 0.1rem black;
+    border-radius: 1rem;
+
+}
+
+
+.gallery3 img{
+
+    width: 100%;
+    vertical-align: top;
+    height: 700px;
+    object-fit: cover;
+    transition: transform 0.5s;
+
+
+}
+
+.gallery3 a:hover{
+
+    box-shadow: 0 0.2rem 0.4rem black;
+    transition: transform .2s;
+
+}
+
+.gallery3 a:hover img{
+
+    filter: blur(0.5px);
+    transform: rotate(3deg) scale(1.1)
+
+}
+
+
+.light-box3{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
+
+}
+
+.light-box3 img{
+
+    width: 25vw;
+    max-height: 80vh;
+    border-radius: 10%;
+
+}
+
+.light-box3:target{
+
+    transform: scale(1);
+
+}
+
+
+.close{
+
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    background: pink;
+    color: white;
+    text-decoration:solid;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size:xx-large;
+
+}
+
+.next{
+
+    display: block;
+    background: pink;
+    color: white;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+footer{
+
+    font-family: 'Roboto Slab', serif;
+    background-color: black;
+    color: lightpink;
+    padding: 4%;
+    border-radius: 1rem;
+
+}
+
+footer nav{
+
+    float: right;
+
+}
+
+footer a{
+
+    font-size: 1.75rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style:oblique;
+    color: white;
+    text-decoration: none;
+    transition: color 0.8s ease;
+
+}
+
+footer a:hover{
+
+    color: rgb(156, 71, 85);
+
+
+}
+
+
+
+@media screen and (max-width:400px){
+
+    .gallery{
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    }
+
+    .gallery2{
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    }
+
+    .close{
+
+        top: 30px;
+        right: 30px;
+
+    }
+    
+}
+
+
+#container{
+
+    font-family: 'EB Garamond', serif;
+
+}
+
+/*
+section{
+
+    background-color: rgb(156, 92, 199);
+    border-radius: 2rem;
+    box-shadow: 0 0.2rem 0.4rem black;
+
+}
+*/
+
+section div{
+
+    text-align: left;
+    padding: auto;
+
+}
+
+section div{
+
+    text-align: left;
+    background-color: rgb(228, 157, 169);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 0.5rem black;
+
+}
+
+section div p{
+
+    font-size: larger;
+    margin: 3%;
+    margin-bottom: 4%;
+    padding: 3%;
+
+}
+
+section div p:hover{
+
+    font-size: larger;
+    transition: transform .2s;
+    filter: blur(0.5px);
+    transform: scale(1.03);
+
+}
+
+.photos{
+
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(390px, 1fr));
+    width: 100%;
+    margin:auto;
+    grid-gap: 10px;
+    padding: 10px 0;
+    overflow: hidden;
+
+}
+
+.photos > img{
+
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.1rem 0.1rem black;
+    border-radius: 1rem;
+
+}
+
+
+.photos img{
+
+    align-items: center;
+    width: 90%;
+    vertical-align: top;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    margin: 5%;
+
+
+}
+
+.photos img:hover{
+
+    box-shadow: 0 0.2rem 0.4rem black;
+    transition: transform .2s;
+    filter: blur(0.5px);
+    transform: scale(1.09)
+
+}
+
+
+.heart{
+
+    height: 80px;
+    width: 80px;
+    background-color: red;
+    margin:auto;
+    box-shadow: 10px 10px 90px red;
+    animation: animHeart .8s linear infinite;
+
+
+}
+
+@keyframes animHeart {
+
+    0%{
+
+        transform: rotate(-45deg) scale(1.07);
+
+    }
+
+    80%{
+
+        transform: rotate(-45deg) scale(1);
+
+    }
+
+    100%{
+
+        transform: rotate(-45deg) scale(.8);
+
+    }
+    
+}
+
+
+.heart::before{
+
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-color: red;
+    box-shadow: -10px 10px 90px red;
+    top: -50%;
+    border-radius: 50%;
+
+}
+
+.heart::after{
+
+    content: '';
+    position: absolute;
+    box-shadow: 10px -10px 90px red;
+    height: 80px;
+    width: 80px;
+    background-color: red;
+    right: -50%;
+    border-radius: 50%;
+
+}
+
+.iconos{
+
+    text-align: center;
+
+}
+
+
+.links{
+
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    grid-gap: 10px;
+    padding: 20px 0;
+    overflow: hidden;
+
+}
+
+article a img{
+
+    height: 150px;
+    align-items: center;
+    object-fit: cover;
+    transition: transform 0.5s;
+    border-radius: 1.3rem;
+    display: grid;
+    width: auto;
+    margin:auto;
+    grid-gap: 10px;
+    padding: 10px 0;
+    overflow: hidden;
+
+}
+
+article a img:hover{
+
+    box-shadow: 0 0.2rem 0.4rem black;
+    transition: transform .2s;
+    filter: blur(0.5px);
+    transform: rotate(3deg) scale(1.1);
+
+}
+
+
